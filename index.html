@@ -1,12 +1,49 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-<title> My Portfolio </title>
+<meta charset="UTF-8">
+<title>Biying Xian — Digital Media Portfolio</title>
+<meta name="description" content="Biying Xian’s personal portfolio: digital media, studies and reflections at the University of Leeds.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="mystylesheet.css" rel="stylesheet" type="text/css" />
 
 </head>
-<body> 
-<h1>Welcome to my website!</h1>
+<body>
+<div class="aim-cursor" aria-hidden="true">
+    <span class="aim-dot"></span>
+    <span class="aim-coordinates"></span>
+</div> 
+<header class="site-header">
+    <a class="wordmark" href="#home">Biying Xian<span> / personal portfolio</span></a>
+    <nav aria-label="Main navigation">
+        <a href="#about">About</a><a href="#studies">Studies</a><a href="#experience">Experience</a><a href="#weekly-reflections">Journal</a>
+    </nav>
+</header>
+<main id="home">
+    <!-- Scrolling cover: the duplicated text creates a seamless loop. -->
+    <section class="scroll-cover" aria-labelledby="page-title">
+        <h1 id="page-title" class="visually-hidden">Welcome to my personal website. Enjoy this moment.</h1>
+        <div class="cover-flower" aria-hidden="true">✳</div>
+        <div class="cover-lines" aria-hidden="true">
+            <div class="cover-marquee">
+                <div class="cover-track">
+                    <span>Welcome to my personal website. <i>✳</i>&nbsp;</span>
+                    <span>Welcome to my personal website. <i>✳</i>&nbsp;</span>
+                </div>
+            </div>
+            <p class="cover-signature">Biying Xian Portfolio</p>
+            <div class="cover-marquee cover-marquee-reverse">
+                <div class="cover-track">
+                    <span>Enjoy this moment. <i>✳</i>&nbsp;</span>
+                    <span>Enjoy this moment. <i>✳</i>&nbsp;</span>
+                </div>
+            </div>
+        </div>
+        <a class="cover-scroll" href="#about">Scroll to explore <span aria-hidden="true">↓</span></a>
+        <button class="cover-motion" type="button" aria-pressed="false">Pause animation</button>
+    </section>
+    <section id="about" class="page-section">
+    <p class="eyebrow">01 / A little introduction</p>
 <h2>About Me</h2>
 <p> Hello! I am currently pursuing an MA in Digital Media
         at the University of Leeds.
@@ -28,6 +65,9 @@
         visual communication, and digital design.
         These experiences inspired me to further
         explore digital media at postgraduate level.</p>
+</section>
+<section id="studies" class="page-section">
+<p class="eyebrow">02 / Learning & exploring</p>
 <!-- My Modules -->
  <h2>My Modules</h2>
  <p>As part of my MA Digital Media programme,
@@ -40,12 +80,18 @@
     <li>Module 2: Contemporary Debates in Media and Communication</li>
     <li>Module 3: Dissertation and Research Methods</li>
 </ul>
+</section>
+<section id="interests" class="page-section">
+<p class="eyebrow">03 / Beyond the classroom</p>
 <!-- My Interests -->
 <h2>My Interests</h2>
 <p>I am also interested in current affairs,
         digital content creation, and visual storytelling.
         I enjoy discovering new perspectives and learning
         about the world through different forms of media.</p>
+</section>
+<section id="experience" class="page-section">
+<p class="eyebrow">04 / People & practice</p>
 <!-- My Experience -->
 <h2>My Experience</h2>
 <p>  Alongside my studies, I have participated in
@@ -69,10 +115,14 @@
         These roles have helped me develop
         communication, organisational,
         and problem-solving skills.</p> 
+</section>
 <!-- WEEKLY REFLECTIONS -->
-<section id="weekly-reflections">
+<section id="weekly-reflections" class="page-section journal">
+<p class="eyebrow">05 / Notes along the way</p>
     <h2>Weekly Reflections</h2>
-    <h3>Week 2: Creating My Portfolio Website</h3>
+    <details>
+<summary><span class="week">Week 02</span><span>Creating My Portfolio Website</span><span class="expand" aria-hidden="true">+</span></summary>
+<div class="entry-body">
     <p>During the workshop held in the second week, I learned two
 methods for creating my own website. The first was CampusPress,
 the university's website platform, which involved a relatively
@@ -108,11 +158,273 @@ a portfolio website with greater freedom using code.</p>
     </p>
 
     <p>
-        This reveals that users's actions whilst browsing websites
+        This reveals that users' actions whilst browsing websites
         are stored, and that there are differing interpretations
         regarding data collection and the boundaries of the
-        public sphere.
+        public sphere.</p>
+</div>
+</details>
+<details>
+<summary><span class="week">Week 03</span><span>Web Scraping</span><span class="expand" aria-hidden="true">+</span></summary>
+<div class="entry-body">
+
+    <h3>BBC iPlayer Data Collection</h3>
+
+    <p>
+        During this workshop, I used a web scraping tool
+        to collect programme titles and category information
+        from the BBC iPlayer homepage.
     </p>
 
+    <p>
+        <a href="data/bbc-iplayer.csv" download>
+            Download My Web Scraping Dataset (CSV)
+        </a>
+    </p>
+
+</div>
+</details>
+</section>
+</main>
+<footer><a class="wordmark" href="#home">Biying Xian</a><p>A work in progress, with room to grow.</p><a href="#home">Back to top ↑</a></footer>
+
+<script>
+// Keep the moving cover optional for every visitor.
+const motionButton = document.querySelector('.cover-motion');
+const cover = document.querySelector('.scroll-cover');
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+function setCoverPaused(paused) {
+    cover.classList.toggle('is-paused', paused);
+    motionButton.setAttribute('aria-pressed', String(paused));
+    motionButton.textContent = paused ? 'Play animation' : 'Pause animation';
+}
+setCoverPaused(motionPreference.matches);
+motionButton.addEventListener('click', () => {
+    setCoverPaused(motionButton.getAttribute('aria-pressed') !== 'true');
+});
+motionPreference.addEventListener('change', event => setCoverPaused(event.matches));
+</script>
+<script>
+
+// Show a crosshair cursor only for a precise mouse pointer.
+(() => {
+    const cursor = document.querySelector('.aim-cursor');
+    const coordinates = cursor.querySelector('.aim-coordinates');
+    const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let frame = 0;
+    let x = 0;
+    let y = 0;
+    let interactive = false;
+    let lastBurst = 0;
+    let activePointer = false;
+
+    function hideCursor() {
+        activePointer = false;
+        document.documentElement.classList.remove('aim-enabled');
+        cursor.classList.remove('is-visible');
+        cancelAnimationFrame(frame);
+        frame = 0;
+    }
+
+    function updateCursor() {
+        cursor.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+        coordinates.textContent = `X: ${Math.round(x)} / Y: ${Math.round(y)}`;
+        cursor.classList.toggle('is-interactive', interactive);
+        cursor.classList.add('is-visible');
+        frame = 0;
+    }
+
+    window.addEventListener('pointermove', event => {
+        if (!finePointer.matches || event.pointerType !== 'mouse') {
+            hideCursor();
+            return;
+        }
+        activePointer = true;
+        x = event.clientX;
+        y = event.clientY;
+        interactive = Boolean(event.target.closest(
+            'a, button, summary, input, textarea, select, [role="button"]'
+        ));
+        document.documentElement.classList.add('aim-enabled');
+        if (!frame) frame = requestAnimationFrame(updateCursor);
+    }, { passive: true });
+
+    window.addEventListener('pointerdown', event => {
+        if (!activePointer || event.pointerType !== 'mouse' ||
+            event.button !== 0 || reducedMotion.matches) return;
+        const now = performance.now();
+        if (now - lastBurst < 100) return;
+        lastBurst = now;
+        const ring = document.createElement('span');
+        ring.className = 'aim-burst';
+        ring.style.left = `${event.clientX}px`;
+        ring.style.top = `${event.clientY}px`;
+        document.body.appendChild(ring);
+        ring.addEventListener('animationend', () => ring.remove(), { once: true });
+        window.setTimeout(() => ring.remove(), 650);
+    }, { passive: true });
+
+    document.documentElement.addEventListener('pointerleave', hideCursor);
+    window.addEventListener('blur', hideCursor);
+    window.addEventListener('keydown', hideCursor);
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) hideCursor();
+    });
+    finePointer.addEventListener('change', hideCursor);
+})();
+</script>
+<script>
+    // Keep the custom cursor independent from other page scripts.
+    (() => {
+        const cursor = document.querySelector(".aim-cursor");
+
+        if (!cursor) return;
+
+        const coordinates = cursor.querySelector(
+            ".aim-coordinates"
+        );
+
+        const finePointer = window.matchMedia(
+            "(hover: hover) and (pointer: fine)"
+        );
+
+        const reducedMotion = window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        );
+
+        let frame = 0;
+        let x = 0;
+        let y = 0;
+        let interactive = false;
+        let activePointer = false;
+        let lastBurst = 0;
+
+        // Restore the normal cursor when appropriate.
+        function hideCursor() {
+            activePointer = false;
+
+            document.documentElement.classList.remove(
+                "aim-enabled"
+            );
+
+            cursor.classList.remove("is-visible");
+
+            cancelAnimationFrame(frame);
+            frame = 0;
+        }
+
+        // Update the cursor once per animation frame.
+        function updateCursor() {
+            cursor.style.transform =
+                `translate3d(${x}px, ${y}px, 0)`;
+
+            coordinates.textContent =
+                `X: ${Math.round(x)} / Y: ${Math.round(y)}`;
+
+            cursor.classList.toggle(
+                "is-interactive",
+                interactive
+            );
+
+            cursor.classList.add("is-visible");
+            frame = 0;
+        }
+
+        // Follow mouse movement without affecting touch input.
+        window.addEventListener("pointermove", (event) => {
+            if (
+                !finePointer.matches ||
+                event.pointerType !== "mouse"
+            ) {
+                hideCursor();
+                return;
+            }
+
+            activePointer = true;
+
+            x = event.clientX;
+            y = event.clientY;
+
+            interactive = Boolean(
+                event.target.closest(
+                    "a, button, summary, input, textarea, " +
+                    "select, [role='button']"
+                )
+            );
+
+            document.documentElement.classList.add(
+                "aim-enabled"
+            );
+
+            if (!frame) {
+                frame = requestAnimationFrame(updateCursor);
+            }
+        }, { passive: true });
+
+        // Add a subtle expanding ring on a primary mouse click.
+        window.addEventListener("pointerdown", (event) => {
+            if (
+                !activePointer ||
+                event.pointerType !== "mouse" ||
+                event.button !== 0 ||
+                reducedMotion.matches
+            ) {
+                return;
+            }
+
+            const now = performance.now();
+
+            // Limit the number of simultaneous effects.
+            if (now - lastBurst < 100) return;
+
+            lastBurst = now;
+
+            const ring = document.createElement("span");
+
+            ring.className = "aim-burst";
+            ring.style.left = `${event.clientX}px`;
+            ring.style.top = `${event.clientY}px`;
+            ring.setAttribute("aria-hidden", "true");
+
+            document.body.appendChild(ring);
+
+            ring.addEventListener("animationend", () => {
+                ring.remove();
+            }, { once: true });
+
+            // Remove the element even if its animation is interrupted.
+            window.setTimeout(() => {
+                ring.remove();
+            }, 650);
+        }, { passive: true });
+
+        // Restore the standard cursor for keyboard navigation.
+        window.addEventListener("keydown", hideCursor);
+
+        window.addEventListener("blur", hideCursor);
+
+        document.documentElement.addEventListener(
+            "pointerleave",
+            hideCursor
+        );
+
+        document.addEventListener("visibilitychange", () => {
+            if (document.hidden) {
+                hideCursor();
+            }
+        });
+
+        finePointer.addEventListener(
+            "change",
+            hideCursor
+        );
+    })();
+</script>
 </body>
+<!-- Custom cursor -->
+<div class="aim-cursor" aria-hidden="true">
+    <span class="aim-dot"></span>
+    <span class="aim-coordinates"></span>
+</div>
 </html>
