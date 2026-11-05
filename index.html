@@ -2,49 +2,77 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Biying Xian — Digital Media Portfolio</title>
+<title>Welcome to My Fragmented Life — Biying Xian</title>
 <meta name="description" content="Biying Xian’s personal portfolio: digital media, studies and reflections at the University of Leeds.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="mystylesheet.css" rel="stylesheet" type="text/css" />
+<link href="mystylesheet.css?v=scrapbook-11" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
-<div class="aim-cursor" aria-hidden="true">
-    <span class="aim-dot"></span>
-    <span class="aim-coordinates"></span>
-</div> 
+<div class="reading-progress" aria-hidden="true"></div>
 <header class="site-header">
     <a class="wordmark" href="#home">Biying Xian<span> / personal portfolio</span></a>
     <nav aria-label="Main navigation">
-        <a href="#about">About</a><a href="#studies">Studies</a><a href="#experience">Experience</a><a href="#weekly-reflections">Journal</a>
+        <a href="#about">About</a><a href="#studies">Studies</a><a href="#interests">Interests</a><a href="#experience">Experience</a><a href="#weekly-reflections">Journal</a><a href="#class-showcase">Class Showcase</a>
     </nav>
 </header>
 <main id="home">
-    <!-- Scrolling cover: the duplicated text creates a seamless loop. -->
-    <section class="scroll-cover" aria-labelledby="page-title">
-        <h1 id="page-title" class="visually-hidden">Welcome to my personal website. Enjoy this moment.</h1>
-        <div class="cover-flower" aria-hidden="true">✳</div>
-        <div class="cover-lines" aria-hidden="true">
-            <div class="cover-marquee">
-                <div class="cover-track">
-                    <span>Welcome to my personal website. <i>✳</i>&nbsp;</span>
-                    <span>Welcome to my personal website. <i>✳</i>&nbsp;</span>
-                </div>
-            </div>
-            <p class="cover-signature">Biying Xian Portfolio</p>
-            <div class="cover-marquee cover-marquee-reverse">
-                <div class="cover-track">
-                    <span>Enjoy this moment. <i>✳</i>&nbsp;</span>
-                    <span>Enjoy this moment. <i>✳</i>&nbsp;</span>
+    <section class="fragment-cover" aria-labelledby="page-title">
+        <div class="cover-intro">
+            <p class="fragment-label">Biying Xian <span aria-hidden="true">/</span> Personal Portfolio</p>
+            <h1 id="page-title">
+                <span class="title-line">Welcome to my</span>
+                <span class="title-line title-line-last">fragmented life<span class="title-period">.</span><span class="title-caret" aria-hidden="true"></span></span>
+            </h1>
+            <button class="thread-toggle" type="button" aria-pressed="false" aria-label="Tie the thread" hidden>
+                <svg viewBox="0 0 240 78" aria-hidden="true">
+                    <path class="thread-stitches" d="M7 39 Q122 45 232 33"/>
+                    <path id="thread-path" class="thread-cord"/>
+                    <use href="#thread-path" class="thread-fibre"/>
+                </svg>
+                <span aria-hidden="true">Tie the thread</span>
+            </button>
+        </div>
+        <figure class="cover-reader">
+            <img class="cover-lantern" src="assets/cover-lantern.png" alt="" width="596" height="875">
+            <img class="cover-blossom-branch" src="assets/cover-blossom-branch.png" alt="" width="673" height="1152">
+            <img class="cover-blue-reader" src="assets/cover-blue-reader.png" alt="A girl in a blue dress reading beside a wicker basket" width="520" height="808">
+        </figure>
+        <div class="fragment-explore">
+            <nav class="fragment-index" aria-label="Explore the fragments">
+                <a class="fragment-card fragment-card-about" href="#about">About Me</a>
+                <a class="fragment-card fragment-card-journal" href="#weekly-reflections">Journal</a>
+                <a class="fragment-card fragment-card-class" href="#class-showcase">Class Showcase</a>
+            </nav>
+            <div class="fragment-preview">
+                <p class="fragment-preview-default">A collection of things I’m learning, making, and noticing.</p>
+                <div class="fragment-preview-notes" aria-hidden="true">
+                    <p class="fragment-preview-about">01 / A little about me and what I’m studying.</p>
+                    <p class="fragment-preview-journal">02 / Notes and reflections from my workshops.</p>
+                    <p class="fragment-preview-class">03 / Classroom experiments and things I’ve made.</p>
                 </div>
             </div>
         </div>
-        <a class="cover-scroll" href="#about">Scroll to explore <span aria-hidden="true">↓</span></a>
-        <button class="cover-motion" type="button" aria-pressed="false">Pause animation</button>
+        <a class="fragment-scroll fragment-link" href="#about">
+            <span aria-hidden="true">↓</span> Explore the fragments
+        </a>
     </section>
+    <nav class="chapter-ribbon" aria-label="Portfolio shortcuts">
+        <a href="#about"><span class="ribbon-word">Read.</span><span class="ribbon-label">01 / About <span aria-hidden="true">↘</span></span></a>
+        <a href="#class-showcase"><span class="ribbon-word">Make.</span><span class="ribbon-label">02 / Showcase <span aria-hidden="true">↘</span></span></a>
+        <a href="#weekly-reflections"><span class="ribbon-word">Reflect.</span><span class="ribbon-label">03 / Journal <span aria-hidden="true">↘</span></span></a>
+    </nav>
     <section id="about" class="page-section">
-    <p class="eyebrow">01 / A little introduction</p>
-<h2>About Me</h2>
+        <figure class="about-collage">
+            <img class="about-book-lamp" src="assets/about-book-lamp.png" alt="" width="480" height="664" loading="lazy">
+            <img class="about-reader" src="assets/about-reader.png" alt="A girl reading an open book" width="1199" height="1677" loading="lazy">
+            <img class="about-book-stack" src="assets/about-book-stack.png" alt="" width="968" height="758" loading="lazy">
+        </figure>
+        <div class="about-heading">
+            <p class="eyebrow">01 / A little introduction</p>
+            <h2 class="chapter-title"><span class="chapter-print">About</span> <span class="chapter-script">Me</span> <span class="about-aside">(the slightly boring part)</span></h2>
+        </div>
+        <div class="about-copy">
 <p> Hello! I am currently pursuing an MA in Digital Media
         at the University of Leeds.
 </p>
@@ -65,11 +93,12 @@
         visual communication, and digital design.
         These experiences inspired me to further
         explore digital media at postgraduate level.</p>
+        </div>
 </section>
 <section id="studies" class="page-section">
 <p class="eyebrow">02 / Learning & exploring</p>
 <!-- My Modules -->
- <h2>My Modules</h2>
+ <h2 class="chapter-title"><span class="chapter-script">My</span> <span class="chapter-print">Modules</span></h2>
  <p>As part of my MA Digital Media programme,
         I am exploring different perspectives on
         digital technologies, media, communication,
@@ -84,7 +113,7 @@
 <section id="interests" class="page-section">
 <p class="eyebrow">03 / Beyond the classroom</p>
 <!-- My Interests -->
-<h2>My Interests</h2>
+<h2 class="chapter-title"><span class="chapter-script">My</span> <span class="chapter-print">Interests</span></h2>
 <p>I am also interested in current affairs,
         digital content creation, and visual storytelling.
         I enjoy discovering new perspectives and learning
@@ -93,7 +122,7 @@
 <section id="experience" class="page-section">
 <p class="eyebrow">04 / People & practice</p>
 <!-- My Experience -->
-<h2>My Experience</h2>
+<h2 class="chapter-title"><span class="chapter-script">My</span> <span class="chapter-print">Experience</span></h2>
 <p>  Alongside my studies, I have participated in
         student organisations, volunteering activities,
         and professional work experiences.</p>
@@ -117,11 +146,17 @@
         and problem-solving skills.</p> 
 </section>
 <!-- WEEKLY REFLECTIONS -->
-<section id="weekly-reflections" class="page-section journal">
-<p class="eyebrow">05 / Notes along the way</p>
-    <h2>Weekly Reflections</h2>
-    <details>
-<summary><span class="week">Week 02</span><span>Creating My Portfolio Website</span><span class="expand" aria-hidden="true">+</span></summary>
+<section id="weekly-reflections" class="page-section journal" aria-labelledby="reflections-title">
+    <header class="journal-masthead">
+        <div class="journal-edition">
+            <p class="eyebrow">05 / Notes along the way</p>
+            <p>Digital Practice · Weeks 02–06</p>
+        </div>
+        <h2 id="reflections-title" class="chapter-title"><span class="chapter-print">Weekly</span> <span class="chapter-script">Reflections</span></h2>
+    </header>
+    <div class="workshop-notes">
+    <details class="workshop-note workshop-feature">
+<summary><span class="week">Week 02</span><span>Creating My Portfolio Website</span><span class="expand" aria-hidden="true">+</span><span class="entry-action" aria-hidden="true"></span></summary>
 <div class="entry-body">
     <p>During the workshop held in the second week, I learned two
 methods for creating my own website. The first was CampusPress,
@@ -164,267 +199,248 @@ a portfolio website with greater freedom using code.</p>
         public sphere.</p>
 </div>
 </details>
-<details>
-<summary><span class="week">Week 03</span><span>Web Scraping</span><span class="expand" aria-hidden="true">+</span></summary>
+<details class="workshop-note" id="week-3">
+<summary><span class="week">Week 03</span><span>Web Scraping</span><span class="expand" aria-hidden="true">+</span><span class="entry-action" aria-hidden="true"></span></summary>
 <div class="entry-body">
-
     <h3>BBC iPlayer Data Collection</h3>
-
-    <p>
-        During this workshop, I used a web scraping tool
-        to collect programme titles and category information
-        from the BBC iPlayer homepage.
-    </p>
-
-    <p>
-        <a href="data/bbc-iplayer.csv" download>
-            Download My Web Scraping Dataset (CSV)
-        </a>
-    </p>
-
+    <p>During the third week's workshop, I was introduced to web scraping and learned how to use the Web Scraper extension to collect information from BBC iPlayer and export it into a CSV file. This helped me understand how information presented on websites can be transformed into data for further analysis.</p>
+    <p>However, I noticed that the exported data was not always well-organised or complete. Some smaller sections of the webpage were difficult to capture accurately, which made the collected information appear somewhat messy. Compared with traditional paper documents, digital information is often organised in ways that make automated collection easier, but it is not necessarily as structured as an Excel spreadsheet.</p>
+    <p>This experience reminded me of Venturini and Rogers (2025, p. 81), who explain that digital information is organised according to the needs of its creators and platforms rather than those of academic researchers. Their argument helped me understand why information that appears organised on a website may not be directly suitable for research purposes.</p>
+    <p>Although web scraping can make data collection more efficient, I realised that automated tools cannot completely replace researchers' judgement. Researchers still need to examine the accuracy and completeness of collected data. As this workshop was mainly an introduction to the software, I hope to develop a better understanding of how to collect and organise more complex digital data in the future.</p>
+    <h3>Reference</h3>
+    <p>Venturini, T. and Rogers, R. (2025) <cite>Digital Methods: A Short Introduction</cite>. Cambridge: Polity Press. Chapter 6, 'Scraping Documents and Interfaces'.</p>
+    <p><a href="data/bbc-iplayer.csv" download>Download My Web Scraping Dataset (CSV)</a></p>
 </div>
 </details>
+        <details class="workshop-note" id="week-4">
+            <summary><span class="week">Week 04</span><span>Data and Data Analysis</span><span class="expand" aria-hidden="true">+</span><span class="entry-action" aria-hidden="true"></span></summary>
+            <div class="entry-body">
+                <p>During this week's workshop, our group created a dataset to explore university students' use of generative AI and their attitudes towards it. As AI continues to develop rapidly, we wanted to understand how students experience and respond to these technologies.</p>
+                <p>We chose Reddit because of its large user base and opportunities for open discussion. Its voting system also allowed us to observe user interactions. To capture different perspectives, we developed detailed categories, including positive, negative, neutral and mixed attitudes.</p>
+                <p>However, while collecting 20 posts, I noticed that negative opinions appeared more frequently. This made me question how representative our data was. People who have used AI or hold strong opinions may be more willing to share their experiences, while students who do not use AI or rarely participate in online discussions may be overlooked.</p>
+                <p>This connects to D'Ignazio and Klein's (2020) <cite>What Gets Counted Counts</cite>, which highlights the relationship between data, classification and power. I realised that data is not entirely neutral. Reddit's community categories and voting mechanisms can influence which discussions become visible, while our own coding decisions also shape how different opinions are represented. Consequently, some voices may receive greater attention while others remain underrepresented.</p>
+                <p>Reflecting on this experience, I recognised the limitations of our small sample and the lack of a clear time frame. If I repeated this research, I would establish a more specific time range, expand the dataset and consider additional sources to capture a wider range of perspectives.</p>
+                <h3>Reference</h3>
+                <p>D'Ignazio, C. and Klein, L.F. (2020) 'What Gets Counted Counts'. In: <cite>Data Feminism</cite>. Cambridge: MIT Press, pp. 97–123.</p>
+                <p><a href="data/week-4-group-5-dataset.xlsx" download="Group 5 Dataset.xlsx">Download the coded dataset (Excel)</a></p>
+                <p><a href="data/week-4-reddit-posts.xlsx" download="Reddit Posts.xlsx">Download the Reddit posts workbook (Excel)</a></p>
+            </div>
+        </details>
+        <details class="workshop-note" id="week-5">
+            <summary><span class="week">Week 05</span><span>Data Visualisation</span><span class="expand" aria-hidden="true">+</span><span class="entry-action" aria-hidden="true"></span></summary>
+            <div class="entry-body">
+                <p>During this week's workshop, we continued working with the dataset collected in Week 4 and learned how to use Excel to create data visualisations, including bar charts and pie charts. I found this particularly useful because when a spreadsheet contains a large amount of information, it can be difficult to identify patterns simply by looking at numbers. Using different charts, colour contrasts and percentage labels makes the results more accessible and easier for audiences to understand. For example, we could visually present students' AI usage and attitudes, allowing viewers to recognise differences between categories more quickly.</p>
+                <p>This experience connects to Feigenbaum and Alamalhodaei's (2020) <cite>Visual Data Storytelling</cite>, which encouraged me to think critically about how data is organised and communicated through visual representations.</p>
+                <p>However, I also realised that visualisation can make data appear more convincing while potentially hiding its limitations. Although charts clearly present percentages, audiences may overlook the fact that our findings were based on only 20 Reddit posts, which cannot represent all university students.</p>
+                <p>More importantly, I began to recognise the relationship between data visualisation and power. The process of deciding what gets recorded, categorised and displayed is not entirely neutral. Researchers have the power to highlight certain information, while other perspectives may remain invisible. Therefore, I believe effective data visualisation should not only communicate findings clearly but also encourage audiences to recognise the limitations behind the data.</p>
+                <h3>Reference</h3>
+                <p>Feigenbaum, A. and Alamalhodaei, A. (2020) 'Visual Data Storytelling'. In: <cite>The Data Storytelling Workbook</cite>. Routledge.</p>
+                <p><a href="assets/week-5-ai-attitudes.png">View the attitudes towards AI pie chart (PNG)</a></p>
+            </div>
+        </details>
+        <article class="workshop-note" id="week-6">
+            <div class="note-face"><h3>Week 06</h3><p>Space for workshop work</p></div>
+        </article>
+    </div>
 </section>
+    <section id="class-showcase" class="page-section" aria-labelledby="showcase-title">
+        <p class="eyebrow">06 / From the classroom</p>
+        <h2 id="showcase-title" class="chapter-title"><span class="chapter-print">Class</span> <span class="chapter-script">Showcase</span></h2>
+        <p>Exercises and experiments from my Digital Practice workshops.</p>
+        <details class="showcase-entry">
+            <summary>
+                <span class="week">Week 03</span>
+                <span>BBC iPlayer Web Scraping</span>
+                <span class="expand" aria-hidden="true">+</span>
+                <span class="entry-action" aria-hidden="true"></span>
+            </summary>
+            <div class="entry-body">
+                <p>I collected programme titles and categories from the BBC iPlayer homepage using Web Scraper.</p>
+                <a class="fragment-link" href="data/bbc-iplayer.csv" download>Download dataset (CSV) <span aria-hidden="true">↓</span></a>
+            </div>
+        </details>
+        <details class="showcase-entry">
+            <summary>
+                <span class="week">Week 04</span>
+                <span>Reddit Data Collection and Coding</span>
+                <span class="expand" aria-hidden="true">+</span>
+                <span class="entry-action" aria-hidden="true"></span>
+            </summary>
+            <div class="entry-body">
+                <p>Our group collected and coded 20 Reddit posts to explore how university students discuss their use of generative AI and their attitudes towards it.</p>
+                <p><a href="data/week-4-group-5-dataset.xlsx" download="Group 5 Dataset.xlsx">Download Group 5 Dataset (Excel)</a></p>
+                <p><a href="data/week-4-reddit-posts.xlsx" download="Reddit Posts.xlsx">Download Reddit Posts (Excel)</a></p>
+            </div>
+        </details>
+        <details class="showcase-entry">
+            <summary>
+                <span class="week">Week 05</span>
+                <span>Attitudes Towards AI Pie Chart</span>
+                <span class="expand" aria-hidden="true">+</span>
+                <span class="entry-action" aria-hidden="true"></span>
+            </summary>
+            <div class="entry-body">
+                <p>I used Excel to visualise the attitudes recorded in our Week 4 dataset.</p>
+                <figure class="showcase-chart">
+                    <a href="assets/week-5-ai-attitudes.png">
+                        <img src="assets/week-5-ai-attitudes.png" width="2048" height="1065" loading="lazy" alt="Attitudes towards AI in 20 Reddit posts: 70% negative, 20% mixed, 5% positive, 5% unclear and 0% neutral. Open the full-size chart.">
+                    </a>
+                    <figcaption>Attitudes towards AI in our sample of 20 Reddit posts.</figcaption>
+                </figure>
+            </div>
+        </details>
+    </section>
 </main>
 <footer><a class="wordmark" href="#home">Biying Xian</a><p>A work in progress, with room to grow.</p><a href="#home">Back to top ↑</a></footer>
 
 <script>
-// Keep the moving cover optional for every visitor.
-const motionButton = document.querySelector('.cover-motion');
-const cover = document.querySelector('.scroll-cover');
-const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
-function setCoverPaused(paused) {
-    cover.classList.toggle('is-paused', paused);
-    motionButton.setAttribute('aria-pressed', String(paused));
-    motionButton.textContent = paused ? 'Play animation' : 'Pause animation';
-}
-setCoverPaused(motionPreference.matches);
-motionButton.addEventListener('click', () => {
-    setCoverPaused(motionButton.getAttribute('aria-pressed') !== 'true');
-});
-motionPreference.addEventListener('change', event => setCoverPaused(event.matches));
-</script>
-<script>
-
-// Show a crosshair cursor only for a precise mouse pointer.
-(() => {
-    const cursor = document.querySelector('.aim-cursor');
-    const coordinates = cursor.querySelector('.aim-coordinates');
-    const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    let frame = 0;
-    let x = 0;
-    let y = 0;
-    let interactive = false;
-    let lastBurst = 0;
-    let activePointer = false;
-
-    function hideCursor() {
-        activePointer = false;
-        document.documentElement.classList.remove('aim-enabled');
-        cursor.classList.remove('is-visible');
-        cancelAnimationFrame(frame);
-        frame = 0;
-    }
-
-    function updateCursor() {
-        cursor.style.transform = `translate3d(${x}px, ${y}px, 0)`;
-        coordinates.textContent = `X: ${Math.round(x)} / Y: ${Math.round(y)}`;
-        cursor.classList.toggle('is-interactive', interactive);
-        cursor.classList.add('is-visible');
-        frame = 0;
-    }
-
-    window.addEventListener('pointermove', event => {
-        if (!finePointer.matches || event.pointerType !== 'mouse') {
-            hideCursor();
-            return;
-        }
-        activePointer = true;
-        x = event.clientX;
-        y = event.clientY;
-        interactive = Boolean(event.target.closest(
-            'a, button, summary, input, textarea, select, [role="button"]'
-        ));
-        document.documentElement.classList.add('aim-enabled');
-        if (!frame) frame = requestAnimationFrame(updateCursor);
-    }, { passive: true });
-
-    window.addEventListener('pointerdown', event => {
-        if (!activePointer || event.pointerType !== 'mouse' ||
-            event.button !== 0 || reducedMotion.matches) return;
-        const now = performance.now();
-        if (now - lastBurst < 100) return;
-        lastBurst = now;
-        const ring = document.createElement('span');
-        ring.className = 'aim-burst';
-        ring.style.left = `${event.clientX}px`;
-        ring.style.top = `${event.clientY}px`;
-        document.body.appendChild(ring);
-        ring.addEventListener('animationend', () => ring.remove(), { once: true });
-        window.setTimeout(() => ring.remove(), 650);
-    }, { passive: true });
-
-    document.documentElement.addEventListener('pointerleave', hideCursor);
-    window.addEventListener('blur', hideCursor);
-    window.addEventListener('keydown', hideCursor);
-    document.addEventListener('visibilitychange', () => {
-        if (document.hidden) hideCursor();
-    });
-    finePointer.addEventListener('change', hideCursor);
-})();
-</script>
-<script>
-    // Keep the custom cursor independent from other page scripts.
     (() => {
-        const cursor = document.querySelector(".aim-cursor");
+        const thread = document.querySelector('.thread-toggle');
+        const cord = document.querySelector('#thread-path');
+        const label = thread.querySelector('span');
+        const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 
-        if (!cursor) return;
-
-        const coordinates = cursor.querySelector(
-            ".aim-coordinates"
-        );
-
-        const finePointer = window.matchMedia(
-            "(hover: hover) and (pointer: fine)"
-        );
-
-        const reducedMotion = window.matchMedia(
-            "(prefers-reduced-motion: reduce)"
-        );
-
+        // Each row describes one cubic curve of the same piece of thread.
+        const loose = [
+            10, 49,
+            23, 66, 44, 56, 52, 43,
+            65, 25, 53, 12, 42, 19,
+            31, 27, 48, 43, 62, 42,
+            84, 40, 99, 26, 115, 22,
+            136, 15, 159, 20, 165, 30,
+            173, 47, 149, 53, 133, 45,
+            120, 39, 106, 43, 94, 56,
+            82, 70, 69, 73, 63, 67
+        ];
+        const tied = [
+            7, 61,
+            43, 70, 77, 59, 108, 39,
+            91, 28, 70, 8, 84, 7,
+            100, 4, 113, 21, 108, 39,
+            123, 19, 146, 5, 152, 16,
+            160, 32, 124, 45, 108, 39,
+            91, 38, 79, 51, 89, 59,
+            100, 68, 106, 48, 108, 39,
+            128, 46, 148, 55, 184, 60
+        ];
+        let shape = loose;
         let frame = 0;
-        let x = 0;
-        let y = 0;
-        let interactive = false;
-        let activePointer = false;
-        let lastBurst = 0;
 
-        // Restore the normal cursor when appropriate.
-        function hideCursor() {
-            activePointer = false;
+        function drawThread(points) {
+            let path = 'M' + points.slice(0, 2).join(' ');
+            for (let i = 2; i < points.length; i += 6) {
+                path += ' C' + points.slice(i, i + 6).join(' ');
+            }
+            cord.setAttribute('d', path);
+        }
 
-            document.documentElement.classList.remove(
-                "aim-enabled"
-            );
-
-            cursor.classList.remove("is-visible");
-
+        drawThread(shape);
+        thread.hidden = false;
+        thread.addEventListener('click', () => {
+            const isTied = thread.getAttribute('aria-pressed') === 'true';
+            const target = isTied ? loose : tied;
+            thread.setAttribute('aria-pressed', String(!isTied));
+            label.textContent = isTied ? 'Tie the thread' : 'Untie the thread';
             cancelAnimationFrame(frame);
-            frame = 0;
-        }
 
-        // Update the cursor once per animation frame.
-        function updateCursor() {
-            cursor.style.transform =
-                `translate3d(${x}px, ${y}px, 0)`;
-
-            coordinates.textContent =
-                `X: ${Math.round(x)} / Y: ${Math.round(y)}`;
-
-            cursor.classList.toggle(
-                "is-interactive",
-                interactive
-            );
-
-            cursor.classList.add("is-visible");
-            frame = 0;
-        }
-
-        // Follow mouse movement without affecting touch input.
-        window.addEventListener("pointermove", (event) => {
-            if (
-                !finePointer.matches ||
-                event.pointerType !== "mouse"
-            ) {
-                hideCursor();
+            if (reducedMotion.matches) {
+                shape = target;
+                drawThread(shape);
                 return;
             }
 
-            activePointer = true;
+            const from = shape;
+            const start = performance.now();
 
-            x = event.clientX;
-            y = event.clientY;
-
-            interactive = Boolean(
-                event.target.closest(
-                    "a, button, summary, input, textarea, " +
-                    "select, [role='button']"
-                )
-            );
-
-            document.documentElement.classList.add(
-                "aim-enabled"
-            );
-
-            if (!frame) {
-                frame = requestAnimationFrame(updateCursor);
-            }
-        }, { passive: true });
-
-        // Add a subtle expanding ring on a primary mouse click.
-        window.addEventListener("pointerdown", (event) => {
-            if (
-                !activePointer ||
-                event.pointerType !== "mouse" ||
-                event.button !== 0 ||
-                reducedMotion.matches
-            ) {
-                return;
+            function animate(now) {
+                const progress = Math.min(Math.max((now - start) / 560, 0), 1);
+                const eased = progress * progress * (3 - 2 * progress);
+                shape = from.map((value, i) => value + (target[i] - value) * eased);
+                drawThread(shape);
+                if (progress < 1) frame = requestAnimationFrame(animate);
             }
 
-            const now = performance.now();
-
-            // Limit the number of simultaneous effects.
-            if (now - lastBurst < 100) return;
-
-            lastBurst = now;
-
-            const ring = document.createElement("span");
-
-            ring.className = "aim-burst";
-            ring.style.left = `${event.clientX}px`;
-            ring.style.top = `${event.clientY}px`;
-            ring.setAttribute("aria-hidden", "true");
-
-            document.body.appendChild(ring);
-
-            ring.addEventListener("animationend", () => {
-                ring.remove();
-            }, { once: true });
-
-            // Remove the element even if its animation is interrupted.
-            window.setTimeout(() => {
-                ring.remove();
-            }, 650);
-        }, { passive: true });
-
-        // Restore the standard cursor for keyboard navigation.
-        window.addEventListener("keydown", hideCursor);
-
-        window.addEventListener("blur", hideCursor);
-
-        document.documentElement.addEventListener(
-            "pointerleave",
-            hideCursor
-        );
-
-        document.addEventListener("visibilitychange", () => {
-            if (document.hidden) {
-                hideCursor();
-            }
+            frame = requestAnimationFrame(animate);
         });
+    })();
 
-        finePointer.addEventListener(
-            "change",
-            hideCursor
-        );
+    (() => {
+        const root = document.documentElement;
+        const header = document.querySelector('.site-header');
+        const readingProgress = document.querySelector('.reading-progress');
+        const links = [...header.querySelectorAll('a[href^="#"]')];
+        const sections = [...document.querySelectorAll('main > .page-section')];
+        const motion = matchMedia('(prefers-reduced-motion: no-preference)');
+        const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
+        const cover = document.querySelector('.fragment-cover');
+        const collage = cover.querySelector('.cover-reader');
+        const ribbon = document.querySelector('.chapter-ribbon');
+        let activeLink;
+        let scrollFrame = 0;
+
+        function updateReadingPosition() {
+            scrollFrame = 0;
+            const maxScroll = root.scrollHeight - root.clientHeight;
+            const progress = maxScroll > 0 ? Math.max(0, Math.min(scrollY / maxScroll, 1)) : 0;
+            const threshold = Math.max(header.getBoundingClientRect().bottom + 36, innerHeight * .25);
+            let currentId = 'home';
+            for (const section of sections) {
+                if (section.offsetTop > scrollY + threshold) break;
+                currentId = section.id;
+            }
+            if (progress >= .995) currentId = sections.at(-1).id;
+
+            if (motion.matches) {
+                const { top, height } = ribbon.getBoundingClientRect();
+                if (top < innerHeight && top + height > 0) {
+                    const passage = (innerHeight - top) / (innerHeight + height);
+                    ribbon.style.setProperty('--ribbon-shift', String(2 * passage - 1));
+                }
+            }
+
+            readingProgress.style.setProperty('--reading-progress', progress);
+            const currentLink = links.find(link => link.hash === `#${currentId}`);
+            if (currentLink === activeLink) return;
+            activeLink?.removeAttribute('aria-current');
+            currentLink.setAttribute('aria-current', 'location');
+            activeLink = currentLink;
+        }
+
+        function scheduleReadingUpdate() {
+            if (!scrollFrame) scrollFrame = requestAnimationFrame(updateReadingPosition);
+        }
+
+        addEventListener('scroll', scheduleReadingUpdate, { passive: true });
+        addEventListener('resize', scheduleReadingUpdate);
+        document.querySelector('main').addEventListener('toggle', scheduleReadingUpdate, true);
+        document.fonts?.ready.then(scheduleReadingUpdate);
+        updateReadingPosition();
+
+        if ('IntersectionObserver' in window) {
+            const reveal = new IntersectionObserver(entries => {
+                for (const entry of entries) {
+                    if (!entry.isIntersecting) continue;
+                    if (motion.matches && entry.boundingClientRect.top > 0) {
+                        entry.target.classList.add('section-arrival');
+                    }
+                    reveal.unobserve(entry.target);
+                }
+            }, { rootMargin: '0px 0px -12% 0px' });
+            sections.forEach(section => reveal.observe(section));
+        }
+
+        cover.addEventListener('pointermove', event => {
+            if (!motion.matches || !finePointer.matches || event.pointerType === 'touch') return;
+            const bounds = cover.getBoundingClientRect();
+            collage.style.setProperty('--cover-x', `${((event.clientX - bounds.left) / bounds.width - .5) * 14}px`);
+            collage.style.setProperty('--cover-y', `${((event.clientY - bounds.top) / bounds.height - .5) * 10}px`);
+        }, { passive: true });
+
+        cover.addEventListener('pointerleave', () => {
+            collage.style.removeProperty('--cover-x');
+            collage.style.removeProperty('--cover-y');
+        });
     })();
 </script>
 </body>
-<!-- Custom cursor -->
-<div class="aim-cursor" aria-hidden="true">
-    <span class="aim-dot"></span>
-    <span class="aim-coordinates"></span>
-</div>
 </html>
