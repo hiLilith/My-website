@@ -5,7 +5,7 @@
 <title>Welcome to My Fragmented Life — Biying Xian</title>
 <meta name="description" content="Biying Xian’s personal portfolio: digital media, studies and reflections at the University of Leeds.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="mystylesheet.css?v=scrapbook-11" rel="stylesheet" type="text/css" />
+<link href="mystylesheet.css?v=scrapbook-12" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
@@ -289,6 +289,18 @@ a portfolio website with greater freedom using code.</p>
                 </figure>
             </div>
         </details>
+        <details class="showcase-entry">
+            <summary>
+                <span class="week">Week 06</span>
+                <span>Sumpter's Matrix</span>
+                <span class="expand" aria-hidden="true">+</span>
+                <span class="entry-action" aria-hidden="true"></span>
+            </summary>
+            <div class="entry-body">
+                <p>My Week 6 workshop workbook.</p>
+                <a class="fragment-link" href="data/week-6-sumpters-matrix.xlsx" download="Week 6 - Sumpter's Matrix.xlsx">Download Sumpter's Matrix (Excel) <span aria-hidden="true">↓</span></a>
+            </div>
+        </details>
     </section>
 </main>
 <footer><a class="wordmark" href="#home">Biying Xian</a><p>A work in progress, with room to grow.</p><a href="#home">Back to top ↑</a></footer>
@@ -419,14 +431,10 @@ a portfolio website with greater freedom using code.</p>
         if ('IntersectionObserver' in window) {
             const reveal = new IntersectionObserver(entries => {
                 for (const entry of entries) {
-                    if (!entry.isIntersecting) continue;
-                    if (motion.matches && entry.boundingClientRect.top > 0) {
-                        entry.target.classList.add('section-arrival');
-                    }
-                    reveal.unobserve(entry.target);
+                    entry.target.classList.toggle('section-arrival', entry.isIntersecting && motion.matches);
                 }
             }, { rootMargin: '0px 0px -12% 0px' });
-            sections.forEach(section => reveal.observe(section));
+            [cover, ...sections].forEach(section => reveal.observe(section));
         }
 
         cover.addEventListener('pointermove', event => {
